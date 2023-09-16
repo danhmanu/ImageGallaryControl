@@ -1,0 +1,19 @@
+﻿ <UserControl x:Class="ImageGallaryControl.ImageViewer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ImageGallaryControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Border x:Name="border" BorderThickness="1" Background="Transparent">
+        <ScrollViewer x:Name="scrollHost" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden">
+            <local:ImagePresenter Scale="{Binding Scale, ElementName=uc}" Rotation="{Binding Rotation, ElementName=uc}" Focusable="False" VerticalAlignment="Center" HorizontalAlignment="Center" FlowDirection="LeftToRight">
+                <local:ImagePresenter.Content>
+                    <Image x:Name="image" Source="{Binding ImageSource, ElementName=uc}" Stretch="None" MouseMove="OnImageMouseMove" LostMouseCapture="OnImageLostMouseCapture"
+                           MouseLeftButtonDown="OnImageMouseLeftButtonDown" MouseLeftButtonUp="OnImageMouseLeftButtonUp" />
+                </local:ImagePresenter.Content>
+            </local:ImagePresenter>
+        </ScrollViewer>
+    </Border>
+</UserControl>
