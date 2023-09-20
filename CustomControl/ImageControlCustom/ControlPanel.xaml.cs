@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ImageGallaryControl
+namespace ImageControlCustom
 {
     public enum ControlPanelCommand { Print, HorSize, VerSize, RotateLeft, RotateRight, Prior, Next, ZoomToOriginalSize, AutoSize, Play, Stop, ZoomValueChanged }
     public class ControlPanelEventArgs : EventArgs

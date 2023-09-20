@@ -5,24 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ImageGallaryControl"
         xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        xmlns:local2="clr-namespace:ImageControlCustom;assembly=ImageControlCustom"
+        mc:Ignorable="d">
     <Window.Resources>
         <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
+            <!--<ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/ImageGallaryControl;component/Themes/GalleryStyles.xaml" />
                 <ResourceDictionary Source="/ImageGallaryControl;component/Themes/ScrollBar.xaml" />
                 <ResourceDictionary Source="/ImageGallaryControl;component/Themes/ScrollViewer.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-            <dxb:StatedStyleSelector x:Key="menuItemCaptionStyleSelector">
+            </ResourceDictionary.MergedDictionaries>-->
+            <!--<dxb:StatedStyleSelector x:Key="menuItemCaptionStyleSelector">
                 <dxb:StatedStyleSelectorState IsDefault="True" Style="{StaticResource MenuGalleryItemCaptionTextStyle}" />
-            </dxb:StatedStyleSelector>
+            </dxb:StatedStyleSelector>-->
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
         <Border x:Name="imageViewPopup" Background="#7F000000" Visibility="Visible">
             <Grid>
-                <local:ImageViewer Grid.Row="1"
+                <local2:ImageViewer Grid.Row="1"
                                          x:Name="imageViewer"
                                          ImageSource="/ImageGallaryControl;component/Images/0.jpg"
                                          HorizontalAlignment="Stretch"
@@ -41,7 +41,7 @@
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="20" />
                         </Grid.ColumnDefinitions>
-                        <TextBlock x:Name="imageViewerTitle"
+                        <!--<TextBlock x:Name="imageViewerTitle"
                                    Foreground="#FFBEC3E6"
                                    TextWrapping="Wrap"
                                    Margin="0,3"
@@ -57,9 +57,9 @@
                                 VerticalAlignment="Center"
                                 Width="8"
                                 Click="bntCloseImageViewer_Click"
-                                Margin="0,0,10,0" />
+                                Margin="0,0,10,0" />-->
                     </Grid>
-                    <local:ControlPanel x:Name="controlPanel"
+                    <local2:ControlPanel x:Name="controlPanel"
                                               Margin="0,20,0,10"
                                               Grid.Row="2"
                                               HorizontalAlignment="Center"
@@ -67,6 +67,6 @@
                 </Grid>
             </Grid>
         </Border>
-        <local:SlideViewer x:Name="slideViewer" Visibility="Collapsed" BeforeCurrentSlideLoading="slideViewer_BeforeCurrentSlideLoading"/>
+        <!--<local:SlideViewer x:Name="slideViewer" Visibility="Collapsed" BeforeCurrentSlideLoading="slideViewer_BeforeCurrentSlideLoading"/>-->
     </Grid>
 </Window>

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ImageGallaryControl
+namespace ImageControlCustom
 {
     /// <summary>
     /// Interaction logic for Splitter.xaml

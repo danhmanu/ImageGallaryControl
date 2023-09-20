@@ -58,23 +58,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="SlideViewer.xaml.cs">
-      <DependentUpon>SlideViewer.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Splitter.xaml.cs">
-      <DependentUpon>Splitter.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ZoomScroll.xaml.cs">
-      <DependentUpon>ZoomScroll.xaml</DependentUpon>
-    </Compile>
-    <Page Include="ControlPanel.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ImageViewer.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -83,28 +66,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ControlPanel.xaml.cs">
-      <DependentUpon>ControlPanel.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ImageViewer.xaml.cs">
-      <DependentUpon>ImageViewer.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="SlideViewer.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Splitter.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Themes\ControlPanel.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Themes\GalleryStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -114,14 +79,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Themes\ScrollViewer.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Themes\ZoomScroll.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ZoomScroll.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -163,6 +120,12 @@
     <Resource Include="Images\Size_1x1.svg" />
     <Resource Include="Images\Size_Auto.svg" />
     <Resource Include="Images\Size_Horizontal.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomControl\ImageControlCustom\ImageControlCustom.csproj">
+      <Project>{a10465d0-029b-4f55-98cb-6c686fe7e6b9}</Project>
+      <Name>ImageControlCustom</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.1062
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageGallaryControl", "ImageGallaryControl\ImageGallaryControl.csproj", "{FAA8CCE9-5814-4CFB-BA94-D0387FF5D030}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ControlCustoms", "ControlCustoms", "{77ED174F-9E5E-4DB1-8B5B-345F8F0FE392}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageControlCustom", "CustomControl\ImageControlCustom\ImageControlCustom.csproj", "{A10465D0-029B-4F55-98CB-6C686FE7E6B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{FAA8CCE9-5814-4CFB-BA94-D0387FF5D030}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAA8CCE9-5814-4CFB-BA94-D0387FF5D030}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAA8CCE9-5814-4CFB-BA94-D0387FF5D030}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A10465D0-029B-4F55-98CB-6C686FE7E6B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A10465D0-029B-4F55-98CB-6C686FE7E6B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A10465D0-029B-4F55-98CB-6C686FE7E6B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A10465D0-029B-4F55-98CB-6C686FE7E6B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A10465D0-029B-4F55-98CB-6C686FE7E6B9} = {77ED174F-9E5E-4DB1-8B5B-345F8F0FE392}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {64F0877C-30DE-41B2-9D3E-F2ED199E4B0A}

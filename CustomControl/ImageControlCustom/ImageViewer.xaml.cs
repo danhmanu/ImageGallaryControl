@@ -13,11 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ImageGallaryControl
+namespace ImageControlCustom
 {
-    /// <summary>
-    /// Interaction logic for ImageViewer.xaml
-    /// </summary>
     public partial class ImageViewer : UserControl
     {
         #region Dependency Properties
