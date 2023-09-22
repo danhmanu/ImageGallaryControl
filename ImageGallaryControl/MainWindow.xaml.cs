@@ -53,6 +53,9 @@ namespace ImageGallaryControl
                 case ControlPanelCommand.AutoSize:
                     controlPanel.SetAndAnimateZoomValue(imageViewer.GetBestFitScale() * 100);
                     break;
+                case ControlPanelCommand.Print:
+                    PrintCurrentImage();
+                    break;
             }
         }
         private void RotateClockwise()
@@ -94,6 +97,28 @@ namespace ImageGallaryControl
         private void imageViewer_MouseWheelZoom(object sender, EventArgs e)
         {
             controlPanel.ZoomValue = imageViewer.Scale * 100;
+        }
+
+        public void PrintCurrentImage()
+        {
+            PrintDialog printDialog = new PrintDialog();
+            if (printDialog.ShowDialog() == true)
+            {
+                PhotoInfo photoInfo = (PhotoInfo)((GalleryItem)imageViewer.Tag).Caption;
+                printDialog.PrintVisual(new Image() { Source = photoInfo.Source }, photoInfo.Caption);
+            }
+        }
+    }
+
+    public class PhotoInfo
+    {
+        public ImageSource Source { get; set; }
+        public string Caption { get; set; }
+        public string SizeInfo { get; set; }
+        public Size ViewSize { get; set; }
+        public PhotoInfo()
+        {
+            ViewSize = new Size(double.NaN, double.NaN);
         }
     }
 }
